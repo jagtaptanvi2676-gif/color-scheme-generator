@@ -1,0 +1,282 @@
+body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    font-family: "Halyard display", sans-serif;
+    background-color: rgb(251, 245, 239);
+    margin-left:30px;
+    
+}
+
+html{
+    height: 100%;
+    
+}
+
+h1{
+    
+    width: 50%;
+    font-weight: 900;
+    font-size: 9rem;
+    margin: 0;
+
+}
+
+h2{
+    margin-top: 8px;
+    margin-left: 8px;
+    width: 35%;
+    font-family: "Noto Serif", serif;
+    font-size: 1.1rem;
+    font-weight: 300;
+}
+.input-ele{
+    display: flex;
+    gap: 20px;
+    margin-top: -30px;
+    
+}
+.input-ele p{
+    font-size: 55px;
+    font-weight: bold;
+    width: 150px;
+    margin: 0;
+    margin-top: 30px;
+    line-height: 1.3;
+   
+
+}
+#default-color, #colors, #btn{
+    cursor: pointer;
+
+}
+
+#default-color {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 500px;
+  height: 250px;
+  border: none;
+  border-radius: 0%;
+  display: block;
+  padding: 0;
+  overflow: hidden;
+  background: none;
+ 
+  margin-top: 20px;
+}
+
+#default-color::-webkit-color-swatch-wrapper {
+  padding: 0;
+  border-radius: 0%;
+}
+
+#default-color::-webkit-color-swatch {
+  border: none;
+  border-radius: 0%;
+}
+
+#default-color::-moz-color-swatch {
+  border: none;
+  border-radius: 0%;
+}
+
+main{
+    display: flex;
+    flex-direction: row;
+   align-items: center;
+   
+}
+
+#color-scheme{
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-start;
+    gap: 16px;
+    margin-left: 40px;
+}
+select{
+    padding: 10px 20px;
+    margin-top: 30px;
+    
+}
+
+#colors {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
+  
+  height: 50px;
+  padding: 0 21rem 0 16px; 
+  font-size: 20px;
+  font-family: inherit;
+  color: #333333;
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+  border-radius: 8px;
+  outline: none;
+  
+
+  /* 4. Add custom SVG dropdown arrow */
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23333333%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  background-size: 10px;
+
+
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Hover and Focus States */
+#colors:hover {
+  border-color: #999999;
+}
+
+#colors:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+}
+#btn{
+    padding: 15px 180px;
+    font-size: 18px;
+    background-color: rgb(34, 65, 222);
+    border: none;
+    color: #fff;
+    border-radius: 10px;
+    margin-top: 30px;
+}
+
+
+#color-palette {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  grid-template-rows: repeat(2, 400px);  
+  gap: 16px;                           
+  width: 50%;
+  margin-top: -190px;
+  margin-left: 130px;
+  overflow: hidden;
+ 
+ 
+}
+
+
+
+.color-box {
+    flex: 1; 
+    width: 100%;
+    
+}
+.color-column {
+  flex: 1; 
+  display: flex;
+  flex-direction: column;
+}
+
+.hex-text {
+  text-align: center;
+  font-size: medium;
+  padding: 10px 0;
+  font-family: sans-serif;
+}
+
+
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-palette {
+  animation: fadeIn 0.3s ease-out;
+}
+
+
+@media (max-width: 1024px) {
+  h1 {
+    font-size: 5rem;
+    width: 80%;
+  }
+
+  h2 {
+    width: 80%;
+  }
+
+  main {
+    flex-direction: column; 
+  }
+
+  #color-scheme {
+    margin-left: 0;
+  }
+
+  #color-palette {
+    width: 100%;
+    margin-top: 30px;  
+    margin-left: 0;   
+    margin-right: 20px;
+    grid-template-rows: repeat(2, 250px);
+  }
+}
+
+
+@media (max-width: 693px) {
+  body {
+    margin-left: 16px;
+    padding-right: 16px;
+  }
+
+  h1 {
+    font-size: 3rem;
+    width: 100%;
+  }
+
+  h2 {
+    width: 100%;
+  }
+
+  
+  #color-palette {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 160px); 
+    gap: 12px;
+    margin-right: 0;
+    margin-top: 20px;
+  }
+
+  .color-column {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .color-box {
+    flex: 1;
+    width: 100%;
+    border-radius: 6px;
+  }
+  
+  #default-color {
+    width: 100%;
+    height: 150px;
+  }
+
+  .input-ele p {
+    font-size: 32px;
+  }
+
+  #colors {
+    padding: 0 40px 0 16px; 
+    width: 100%;
+  }
+
+  #btn {
+    padding: 15px 0; 
+    width: 100%;
+  }
+
+
+ 
+}
